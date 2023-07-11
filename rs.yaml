@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: myreplica
+  name: myreplica
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myreplica
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: myreplica
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        resources: {}
+status: {}
